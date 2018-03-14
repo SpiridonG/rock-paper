@@ -24,6 +24,6 @@ class hand1result extends TestCase
 		$this->assertEquals('Scissors', $some);
 	}
 }
-/* should return 2 errors 1 assertion */
+/* should return 2 failures 1 assertion */
 
 ?>

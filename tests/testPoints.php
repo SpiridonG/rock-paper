@@ -24,5 +24,5 @@ class winner extends TestCase
 	}
 	
 }
-/* should return 1 error 1 assertion */
+/* should return 1 failure 1 assertion */
 ?>

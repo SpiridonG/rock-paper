@@ -1,7 +1,6 @@
 <?php 
-declare(strict_types=1);
 
-$rounds = 3;
+
 final class Game{
 	 	public $chances = array('Rock','Scissors','Paper');	
 			public function hand1(){
@@ -10,10 +9,6 @@ final class Game{
 				$this->hand = $this->chances[$draw];
 				return $this->hand;
 			}
-			public function __construct() {
-					$this->points1 = 0;
-					$this->points2 = 0;
-			}
 			public function hand2(){
 				$hand = count($this->chances);				
 				$this->draw = rand(0,$hand-1);
@@ -21,9 +16,14 @@ final class Game{
 				return $this->hand;
 				
 			}
+			public function __construct() {
+					$this->points1 = 0;
+					$this->points2 = 0;
+			}
 			
 			public function play(){
-				for($i=0;$i<3;$i++){
+				$rounds = 3 ;
+				for($i=0;$i<$rounds;$i++){ /* where 3 is number of rounds */
 					$hand1 = $this->hand1();
 					$hand2 = $this->hand2();
 					echo $hand1." VS ".$hand2;
@@ -49,7 +49,7 @@ final class Game{
 					$this->winner = 'Winner: Player #1';
 					print $this->winner;
 				}else{
-					$this->winner = 'Winner: Player #1';
+					$this->winner = 'Winner: Player #2';
 					print $this->winner;		
 				}
 			}
