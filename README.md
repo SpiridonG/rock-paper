@@ -1,1 +1,3 @@
-"# rock-paper" 
+"# rock-paper-scissors " 
+# Prerequisites
+Composer,PHPunit
